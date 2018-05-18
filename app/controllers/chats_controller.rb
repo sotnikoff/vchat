@@ -1,7 +1,7 @@
 class ChatsController < ApplicationController
   def create
     @chat = Chat.new(chat_params)
-    if @chat.save
+    if verify_recaptcha(model: @chat) && @chat.save
       redirect_to chat_path(@chat)
     else
       redirect_to root_path

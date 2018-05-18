@@ -111,6 +111,7 @@ GEM
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     jmespath (1.4.0)
+    json (2.1.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -173,6 +174,8 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    recaptcha (4.8.0)
+      json
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -274,6 +277,7 @@ DEPENDENCIES
   rails (~> 5.2.0)
   rails-assets-bootstrap!
   rails-assets-jquery!
+  recaptcha
   rspec-rails (~> 3.7)
   rubocop
   rubocop-rails

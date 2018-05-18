@@ -6,4 +6,6 @@ h1 Create chat
         =f.label :title
         =f.text_field :title, class: 'form-control'
       .form-group
+        =recaptcha_tags
+      .form-group
         =f.submit 'Create chat', class: 'btn btn-success'

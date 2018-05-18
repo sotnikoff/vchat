@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'aws-sdk-polly'
 gem 'aws-sdk-s3'
+gem 'recaptcha', require: 'recaptcha/rails'
 gem 'slim'
 
 source 'https://rails-assets.org' do

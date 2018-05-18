@@ -8,6 +8,8 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
+    nav.navbar.sticky-top.navbar-light.bg-light
+      =link_to 'Home', root_path, class: 'navbar-brand'
     .container#main-container
       .row
         .col-md-12

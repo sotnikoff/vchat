@@ -4,13 +4,17 @@ class ChatsController < ApplicationController
     if verify_recaptcha(model: @chat) && @chat.save
       redirect_to chat_path(@chat)
     else
-      redirect_to root_path
+      render 'index'
     end
   end
 
   def show
     @chat = Chat.find(params[:id])
     @message = Message.new(chat: @chat)
+  end
+
+  def index
+    @chat = Chat.new
   end
 
   private

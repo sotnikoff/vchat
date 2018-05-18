@@ -18,5 +18,6 @@ module Vchat
     config.generators do |g|
       g.test_framework :rspec
     end
+    config.i18n.default_locale = :ru
   end
 end

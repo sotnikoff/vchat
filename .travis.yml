@@ -9,6 +9,7 @@ rvm:
   - 2.5.1
 script:
   - gem install bundler
+  - bundle exec rails db:create
   - bin/bundle exec rubocop
   - bundle exec rails db:migrate RAILS_ENV=test
   - bundle exec rspec

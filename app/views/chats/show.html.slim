@@ -1,0 +1,22 @@
+h1= @chat.title
+.row
+  .col-md-6
+    =form_for @message do |f|
+      =f.hidden_field :chat_id
+      .form-group
+        =f.label :bot
+        =f.text_field :bot, class: 'form-control'
+      .form-group
+        =f.label :text
+        =f.text_area :text, class: 'form-control'
+      .form-group
+        = recaptcha_tags
+      .form-group
+        =f.submit 'Send Message', class: 'btn btn-outline-success'
+.row
+  .col-md-12
+    -@chat.messages.last_fifty.each do |msg|
+      .card.bot-message
+        .card-body
+          h5.card-title= msg.bot
+          p= msg.text

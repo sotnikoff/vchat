@@ -1,0 +1,17 @@
+h1 Create chat
+.row
+  .col-md-6
+    -if @chat.errors.any?
+      -@chat.errors.full_messages.each do |msg|
+        .alert.alert-danger
+          =msg
+.row
+  .col-md-6
+    =form_for @chat do |f|
+      .form-group
+        =f.label :title
+        =f.text_field :title, class: 'form-control'
+      .form-group
+        =recaptcha_tags
+      .form-group
+        =f.submit 'Create chat', class: 'btn btn-success'

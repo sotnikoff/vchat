@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#index'
+  resources :chats, only: %i[create show index]
+  resources :messages, only: %i[create]
+  root 'chats#index'
 end

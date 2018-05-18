@@ -20,7 +20,7 @@ RSpec.describe Chat, type: :model do
   end
 
   it 'fails with long title' do
-    @chat.title = '!' * 100
+    @chat.title = '!' * 50
     expect(@chat).not_to be_valid
   end
 end

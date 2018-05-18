@@ -1,2 +1,9 @@
-h1 Pages#index
-p Find me in app/views/pages/index.html.erb
+h1 Create chat
+.row
+  .col-md-6
+    =form_for @chat do |f|
+      .form-group
+        =f.label :title
+        =f.text_field :title, class: 'form-control'
+      .form-group
+        =f.submit 'Create chat', class: 'btn btn-success'

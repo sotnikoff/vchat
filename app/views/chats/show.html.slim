@@ -5,14 +5,13 @@ h1= @chat.title
       =f.hidden_field :chat_id
       .form-group
         =f.label :bot
-        =f.text_field :bot, class: 'form-control'
+        =f.select :bot, options_for_select(%w[Maxim Tatyana Matthew Kimberly Mizuki Takumi]),
+                {}, class: 'form-control'
       .form-group
         =f.label :text
         =f.text_area :text, class: 'form-control'
       .form-group
-        = recaptcha_tags
-      .form-group
-        =f.submit 'Send Message', class: 'btn btn-outline-success'
+        =f.submit t('.send_message'), class: 'btn btn-outline-success'
 .row
   .col-md-12
     -@chat.messages.last_fifty.each do |msg|

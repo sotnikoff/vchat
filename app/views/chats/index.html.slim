@@ -12,6 +12,8 @@ h1 Create chat
         =f.label :title
         =f.text_field :title, class: 'form-control'
       .form-group
-        =recaptcha_tags
-      .form-group
         =f.submit 'Create chat', class: 'btn btn-success'
+  .col-md-6
+    h4 Chats
+    -Chat.last_fifty.each do |chat|
+      p= link_to chat.title, chat_path(chat)

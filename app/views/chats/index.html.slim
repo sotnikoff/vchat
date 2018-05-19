@@ -1,4 +1,4 @@
-h1 Create chat
+h1= t('.create_chat')
 .row
   .col-md-6
     -if @chat.errors.any?
@@ -12,8 +12,8 @@ h1 Create chat
         =f.label :title
         =f.text_field :title, class: 'form-control'
       .form-group
-        =f.submit 'Create chat', class: 'btn btn-success'
+        =f.submit t('.create_chat_button'), class: 'btn btn-success'
   .col-md-6
-    h4 Chats
+    h4= t('.chats')
     -Chat.last_fifty.each do |chat|
       p= link_to chat.title, chat_path(chat)

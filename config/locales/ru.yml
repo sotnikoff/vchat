@@ -1,6 +1,10 @@
 ---
 ru:
   chats:
+    index:
+      create_chat: Создайте чат
+      create_chat_button: Создать
+      chats: Последние чаты
     show:
       send_message: Отправить сообщение
   activerecord:
@@ -14,6 +18,8 @@ ru:
       message:
         bot: Бот
         text: Текст сообщения
+      chat:
+        title: Название
   date:
     abbr_day_names:
     - Вс

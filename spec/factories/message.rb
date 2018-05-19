@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :message do
-    bot 'maxim'
+    bot 'Maxim'
     text 'MyText'
     chat
   end

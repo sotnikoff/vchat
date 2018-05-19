@@ -19,4 +19,7 @@ h1= @chat.title
       .card.bot-message
         .card-body
           h5.card-title= msg.bot
-          p= msg.text
+          div
+            =audio_tag voice_path(msg.id), controls: true
+            blockquote.blockquote
+              p.mb-0= msg.text
